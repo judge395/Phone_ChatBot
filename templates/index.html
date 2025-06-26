@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Info Chatbot</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-box">
+            <div class="chat-header">
+                <img src="static/ja.webp" alt="Logo" class="chat-logo">
+            </div>
+            <div class="chat-body" id="chat-body">
+                <p>Hello! How can I assist you with phone information?</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user_input" placeholder="Ask about a phone..">
+                <button onclick="sendMessage()">Send</button>
+                <button onclick="clearChat()">Clear</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('user_input').value;
+            if (userInput.trim() === '') return;
+    
+            const chatBody = document.getElementById('chat-body');
+            const userMessage = `<div class="user-message"><p>${userInput}</p></div>`;
+            chatBody.innerHTML += userMessage;
+    
+            storeMessage('user', userInput);
+            document.getElementById('user_input').value = '';
+    
+            fetch('/get_response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({ user_input: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botMessage = `<div class="bot-message"><p>${data.response}</p></div>`;
+                chatBody.innerHTML += botMessage;
+                storeMessage('bot', data.response);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            });
+        }
+    
+        function storeMessage(sender, message) {
+            const currentMessages = JSON.parse(localStorage.getItem('chatHistory')) || [];
+            currentMessages.push({ sender, message });
+            localStorage.setItem('chatHistory', JSON.stringify(currentMessages));
+        }
+    
+        function clearChat() {
+            localStorage.removeItem('chatHistory');
+            document.getElementById('chat-body').innerHTML = '<p>Hello! How can I assist you with phone information?</p>';
+        }
+    
+        window.onload = function() {
+            const chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+            const chatBody = document.getElementById('chat-body');
+            chatHistory.forEach(item => {
+                const message = `<div class="${item.sender}-message"><p>${item.message}</p></div>`;
+                chatBody.innerHTML += message;
+            });
+        }
+    </script>
+
+</body>
+</html>

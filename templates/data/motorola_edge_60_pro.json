@@ -1,0 +1,61 @@
+{
+    "phone_name": "Motorola Edge 60 Pro",
+    "specifications": {
+        "Network": {
+            "Technology": "GSM / HSPA / LTE / 5G",
+            "2G bands": "GSM 850 / 900 / 1800 / 1900",
+            "3G bands": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+            "4G bands": "1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 34, 38, 39, 40, 41, 42, 43, 66, 71",
+            "5G bands": "1, 2, 3, 5, 7, 8, 20, 26, 28, 38, 40, 41, 66, 71, 75, 77, 78 SA/NSA/Sub6",
+            "Speed": "HSPA, LTE, 5G"
+        },
+        "Launch": {
+            "Announced": "2025, April 24",
+            "Status": "Available. Released 2025, April 30"
+        },
+        "Body": {
+            "Dimensions": "160.7 x 73.1 x 8.2 mm (6.33 x 2.88 x 0.32 in)",
+            "Weight": "186 g (6.56 oz)",
+            "Build": "Glass front (Gorilla Glass 7i), plastic frame, silicone polymer (eco leather) back",
+            "SIM": "Nano-SIM Nano-SIM + eSIM Nano-SIM + Nano-SIM",
+            "": "IP68/IP69 dust tight and water resistant (high pressure water jets; immersible up to 1.5m for 30 min) MIL-STD-810H compliant* * does not guarantee ruggedness or use in extreme conditions"
+        },
+        "Display": {
+            "Type": "P-OLED, 1B colors, 120Hz, 720Hz PWM, HDR10+, 4500 nits peak",
+            "Size": "6.7 inches, 108.4 cm 2 (~92.2% screen-to-body ratio)",
+            "Resolution": "1220 x 2712 pixels, 20:9 ratio (~444 ppi density)",
+            "Protection": "Corning Gorilla Glass 7i"
+        },
+        "Platform": {
+            "OS": "Android 15, up to 3 major Android upgrades",
+            "Chipset": "Mediatek Dimensity 8350 Extreme (4 nm)",
+            "CPU": "Octa-core (1x3.35 GHz Cortex-A715 & 3x3.20 GHz Cortex-A715 & 4x2.20 GHz Cortex-A510)",
+            "GPU": "Mali G615-MC6"
+        },
+        "Memory": {
+            "Card slot": "No",
+            "Internal": "256GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM",
+            "": "UFS 4.0"
+        },
+        "Selfie camera": {
+            "Single": "50 MP, f/2.0, (wide), 1/2.76\", 0.64µm",
+            "Features": "HDR",
+            "Video": "4K@30fps, 1080p@30/120fps"
+        },
+        "Sound": {
+            "Loudspeaker": "Yes, with stereo speakers (with Dolby Atmos)",
+            "3.5mm jack": "No",
+            "": "24-bit/192kHz Hi-Res audio"
+        },
+        "Features": {
+            "Sensors": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass",
+            "": "Smart Connect support"
+        },
+        "Misc": {
+            "Colors": "Pantone: Shadow, Dazzling Blue , Sparkling Grape",
+            "Models": "XT2507-1",
+            "SAR EU": "0.90 W/kg (head)     1.39 W/kg (body)",
+            "Price": "$ 690.00 / € 515.00 / ₹ 31,399"
+        }
+    }
+}
